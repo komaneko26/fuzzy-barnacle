@@ -1,0 +1,52 @@
+<!-- --------------------------------------------------
+参考
+https://techacademy.jp/magazine/36505
+-------------------------------------------------- -->
+​
+<!DOCTYPE html>
+<html lang="ja">
+​
+<head>
+   <meta charset="utf-8">
+   <title>タイプボタンパーツ</title>
+   <style>
+      body{
+         background-color: red;
+      }
+      button {
+         width: 50px;
+         height: 50px;
+         margin:3px;
+         /* ↓ここの透過100%にしたらできる？ */
+         background-color: rgba(250,250,250,0.6); 
+         color: rgba(255,255,255,0); 
+         border:none;
+      }
+   </style>
+</head>
+​
+<body>
+   <div id="div1"></div>
+​
+   <script language="javascript" type="text/javascript">
+      const div1 = document.getElementById("div1");
+      var type=['Normal','Fire','Water','Grass','Electric','Ice','Fighting','Posion','Ground','Flying','Psychic','Bug','Rock','Ghost','Dragon'];
+​
+      for (let i = 0; i < 3; i++) {
+         const newDiv = document.createElement("div");
+         for (let j = 0; j < 5; j++) {
+            const newBtn = document.createElement("button");
+            newBtn.innerHTML = i * 5 + j ;
+​
+            newBtn.onclick = () => {
+               console.log(`${newBtn.innerHTML}が押されました！`);
+               console.log(type[newBtn.innerHTML]);
+            }
+            newDiv.appendChild(newBtn);
+         }
+         div1.appendChild(newDiv);
+      }
+   </script>
+</body>
+​
+</html>
