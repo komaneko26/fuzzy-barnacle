@@ -1,0 +1,19 @@
+.scroll{
+    height: 80px;
+    overflow: auto;
+  }
+
+.wrap-vertical{
+	overflow: hidden;
+	width: 300px;
+	height: 500px;
+	border: solid 1px black;
+    border-radius: 12px;
+}
+.wrap-vertical__inner{
+	overflow-y: scroll;
+	width: calc(300px + 17px);
+	height: 100%;
+	padding: 1em;
+	padding-right: calc(1em + 17px);
+}
